@@ -1,22 +1,24 @@
 import PropTypes from 'prop-types';
 
-const Statistics = ({ title, stats, children }) => {
-  return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+const Statistics = ({ title, stats, children }) => (
+  <section className="statistics">
+    {title && <h2 className="title">{title}</h2>}
 
-      <ul className="stat-list">
-        {stats.map(stats => (
-          <li key={stats.id} className="item">
-            <span className="label">{stats.label}</span>
-            <span className="percentage">{stats.percentage}%</span>
-          </li>
-        ))}
-      </ul>
+    <ul className="stat-list">
+      {stats.map(stats => (
+        <li key={stats.id} className="item">
+          <span className="label">{stats.label}</span>
+          <span className="percentage">{stats.percentage}%</span>
+        </li>
+      ))}
+    </ul>
 
-      {children}
-    </section>
-  );
+    {children}
+  </section>
+);
+
+Statistics.defaultProps = {
+  title: '',
 };
 
 Statistics.propTypes = {
@@ -26,8 +28,9 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    }),
+    }).isRequired,
   ),
+  children: PropTypes.node, //node-что угодно, все, что может быть зарендерино
 };
 
 // function getRandomColor() {
