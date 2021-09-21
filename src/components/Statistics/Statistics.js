@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import s from './';
 
 const Statistics = ({ title, stats, children }) => (
   <section className="statistics">

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import s from './';
 import defaultImage from '../images/default.jpg';
 
 const FriendListItem = ({ friend: { avatar = defaultImage, name, isOnline } }) => (
