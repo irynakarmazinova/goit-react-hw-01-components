@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import s from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
-  const secondLaneColor = '#ecf1f4';
+  // const secondLaneColor = '#ecf1f4';
 
   // const classes = s.td + ' ' + s['td-type'];
   const classesType = `${s.td} ${s['td-type']}`;
