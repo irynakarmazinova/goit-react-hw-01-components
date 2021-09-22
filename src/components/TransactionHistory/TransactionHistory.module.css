@@ -31,6 +31,7 @@
   width: 220px;
 
   border: 13px solid transparent;
+  /* border-spacing: 0 13px; */
 }
 
 .td:not(:last-child) {

@@ -3,6 +3,7 @@ import s from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
   const secondLaneColor = '#ecf1f4';
+
   // const classes = s.td + ' ' + s['td-type'];
   const classesType = `${s.td} ${s['td-type']}`;
   const classesCurrency = `${s.td} ${s['td-currency']}`;
