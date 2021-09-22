@@ -1,8 +1,80 @@
 .profile {
-  background-color: red;
+  width: 428px;
+  height: 503px;
+
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 80px;
+  text-align: center;
+
+  color: #3e4a5d;
+  background-color: #e7ecf2;
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  background-color: #fff;
 }
 
 .description {
-  border: 2px solid red;
-  font-size: 72px;
+  padding: 30px 0 30px 0;
+}
+
+.avatar {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+.name,
+.tag {
+  margin-bottom: 10px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.tag,
+.location {
+  font-size: 14px;
+}
+
+.stats {
+  /* list-style: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+
+  background-color: #f3f6f9;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% / 3);
+  padding-top: 18px;
+  padding-bottom: 25px;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid #e8ecf2;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.quantity {
+  font-weight: 700;
+  font-size: 14px;
 }
