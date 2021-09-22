@@ -3,15 +3,15 @@ import s from './FriendListItem.module.css';
 import defaultImage from '../images/default.jpg';
 
 const FriendListItem = ({ friend: { avatar = defaultImage, name, isOnline } }) => {
-  const isActive = true;
+  const isActive = false;
 
   return (
-    <li className="item">
-      <span className={s.status} style={{ color: isActive ? 'green' : 'red' }}>
+    <li className={s.item}>
+      <span className={s.status} style={{ backgroundColor: isActive ? 'green' : 'red' }}>
         {isOnline}
       </span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
+      <img className={s.avatar} src={avatar} alt={name} width="96" />
+      <p className={s.name}>{name}</p>
     </li>
   );
 };

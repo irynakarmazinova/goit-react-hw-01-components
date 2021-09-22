@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
-import s from './';
+import s from './Statistics.module.css';
 
-const Statistics = ({ title, stats, children }) => (
-  <section className="statistics">
-    {title && <h2 className="title">{title}</h2>}
+const Statistics = ({ title, stats /*children*/ }) => (
+  <section className={s.statistics}>
+    <div className={s.box}>
+      {title && <h2 className={s.title}>{title}</h2>}
 
-    <ul className="stat-list">
-      {stats.map(stats => (
-        <li key={stats.id} className="item">
-          <span className="label">{stats.label}</span>
-          <span className="percentage">{stats.percentage}%</span>
-        </li>
-      ))}
-    </ul>
+      <ul className={s['stat-list']}>
+        {stats.map(stats => (
+          <li key={stats.id} className={s.item}>
+            <span className={s.label}>{stats.label}</span>
+            <span className={s.percentage}>{stats.percentage}%</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-    {children}
+    {/* {children} */}
   </section>
 );
 
@@ -31,14 +33,11 @@ Statistics.propTypes = {
       percentage: PropTypes.number.isRequired,
     }).isRequired,
   ),
-  children: PropTypes.node, //node-что угодно, все, что может быть зарендерино
+  // children: PropTypes.node, //node-что угодно, все, что может быть зарендерино
 };
 
-// function getRandomColor() {
-//   return `rgb${randomIntegerFromInterval(0, 255)}, ${randomIntegerFromInterval(
-//     0,
-//     255,
-//   )}, ${randomIntegerFromInterval(0, 255)}`;
+// function generateColor() {
+//   return '#' + Math.floor(Math.random() * 16777215).toString(16);
 // }
 
 export default Statistics;

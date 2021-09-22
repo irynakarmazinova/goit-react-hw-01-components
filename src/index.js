@@ -2,6 +2,7 @@ import React from 'react'; //-если есть jsx, реакт в компон�
 import ReactDOM from 'react-dom';
 import 'modern-normalize/modern-normalize.css';
 import './index.css';
+import './reset.css';
 import App from './App';
 
 ReactDOM.render(

@@ -1,5 +1,4 @@
 /* @import-normalize; - это нормализация от create-react-app*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body {
   margin: 0;
@@ -12,33 +11,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* .list {
-  list-style: none;
-} */
 
 /* инлайн стили использовать для динамической подстановки с БД или использовать Styled Components/Emotion/JSS */
 /* extends in sass === composes in module css */
