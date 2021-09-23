@@ -5,11 +5,12 @@ import './index.css';
 import './reset.css';
 import App from './App';
 
+// var classNames = require('classnames');
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
 //<React.StrictMode> - оборачивает приложение в строгий режим

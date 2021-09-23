@@ -1,20 +1,16 @@
 import PropTypes from 'prop-types';
 import s from './FriendListItem.module.css';
-import defaultImage from '../images/default.jpg';
+import defaultImage from '../images/defaultImage.jpg';
 
-const FriendListItem = ({ friend: { avatar = defaultImage, name, isOnline } }) => {
-  const isActive = false;
-
-  return (
-    <li className={s.item}>
-      <span className={s.status} style={{ backgroundColor: isActive ? 'green' : 'red' }}>
-        {isOnline}
-      </span>
-      <img className={s.avatar} src={avatar} alt={name} width="96" />
-      <p className={s.name}>{name}</p>
-    </li>
-  );
-};
+const FriendListItem = ({ friend: { avatar = defaultImage, name, isOnline } }) => (
+  <li className={s.item}>
+    <span className={s.status} style={{ backgroundColor: isOnline ? 'green' : 'red' }}>
+      {isOnline}
+    </span>
+    <img className={s.avatar} src={avatar} alt={name} width="96" />
+    <p className={s.name}>{name}</p>
+  </li>
+);
 
 FriendListItem.propTypes = {
   friend: PropTypes.shape({

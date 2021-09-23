@@ -3,20 +3,20 @@
   height: 252px;
 
   padding: 60px 52px 60px 52px;
+  margin: 0 auto;
   margin-bottom: 20px;
 
-  background-color: #eff3f6;
+  /* background-color: #eff3f6; */
+  background-color: #e7ecf2;
 }
 
 .box {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: inherit;
 
   height: 131px;
-
-  background-color: #fff;
 }
 
 .title {
@@ -28,6 +28,7 @@
   font-size: 14px;
 
   color: #777f88;
+  background-color: #fff;
 }
 
 .stat-list {
@@ -47,8 +48,8 @@
 
   width: calc(100% / 5);
 
-  background-color: teal;
-  border: 1px solid #fff;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: rgb(41, 41, 41);
   color: #fff;
 }
 

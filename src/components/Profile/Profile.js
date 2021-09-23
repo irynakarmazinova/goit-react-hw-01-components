@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types'; //абсолютные импорты(все библиотеки) стоят выше, чем относительные(мои локальные)
 import s from './Profile.module.css';
-import defaultImage from '../images/default.jpg';
+import defaultImage from '../images/defaultImage.jpg';
 
 const Profile = ({ name, tag, location, avatar, stats: { followers, views, likes } }) => (
   <div className={s.profile}>
-    {/* <div className={s['profile-box']}> */}
     <div className={s.box}>
       <div className={s.description}>
         <img src={avatar} alt={name} className={s.avatar} />

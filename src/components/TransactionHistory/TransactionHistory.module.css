@@ -1,47 +1,64 @@
-.transaction-history {
+.transaction_history {
+  margin: 0 auto;
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
-  color: #777f88;
+
+  border-collapse: collapse;
+  /*убираем пустые промежутки между ячейками*/
   border-radius: 3px;
-  /* border-spacing: 0 13px; */
+  overflow: hidden;
 }
 
 .thead {
+  height: 41px;
+
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
+
+  overflow: hidden;
 
   color: #fff;
   background-color: #00bcd7;
 }
 
+.head_line:first-child > .th:first-child {
+  border-top-left-radius: 3px;
+}
+.head_line:first-child > .th:last-child {
+  border-radius: 3px;
+}
+
 .th {
   width: 220px;
 
-  border: 13px solid transparent;
+  border: 1px solid #e3e5e6;
 }
 
 .tbody {
   text-align: center;
   font-weight: 400;
   font-size: 14px;
+
+  background-color: #fff;
+  color: #777f88;
 }
 
 .td {
   width: 220px;
+  padding: 14px 0 14px 0;
 
-  border: 13px solid transparent;
-  /* border-spacing: 0 13px; */
+  border: 1px solid #e3e5e6;
 }
 
-.td:not(:last-child) {
-  border-right: 1px solid #f3f3f3;
+.body_line:nth-child(2n) {
+  background-color: #ecf1f4;
 }
 
-.td-type:first-letter {
+.td_type:first-letter {
   text-transform: uppercase;
 }
 
-.td-currency {
+.td_currency {
   text-transform: uppercase;
 }
