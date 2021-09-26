@@ -6,7 +6,12 @@ const Profile = ({ name, tag, location, avatar, stats: { followers, views, likes
   <div className={s.profile}>
     <div className={s.box}>
       <div className={s.description}>
-        <img src={avatar} alt={name} className={s.avatar} />
+        <img
+          // src={avatar ? avatar : defaultImage}
+          src={avatar}
+          alt="User avatar"
+          className={s.avatar}
+        />
         <p className={s.name}>{name}</p>
         <p className={s.tag}>@{tag}</p>
         <p className={s.location}>{location}</p>
@@ -40,7 +45,7 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
+  stats: PropTypes.shape(PropTypes.number.isRequired).isRequired,
 };
 //проптайпы не попадают в продакшн
 

@@ -5,28 +5,32 @@ const generateColor = () => {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
 };
 
-const Statistics = ({ title, stats }) => (
+const Statistics = ({ title, stats, percentage }) => (
   <section className={s.statistics}>
     <div className={s.box}>
       {title && <h2 className={s.title}>{title}</h2>}
 
       <ul className={s['stat-list']}>
-        {stats.map(stats => (
+        {stats.map(stat => (
           <li
-            key={stats.id}
+            key={stat.id}
             className={s.item}
             style={{
               backgroundColor: `${generateColor()}`,
             }}
           >
-            <span className={s.label}>{stats.label}</span>
-            <span className={s.percentage}>{stats.percentage}%</span>
+            <span className={s.label}>{stat.label}</span>
+            <span className={s.percentage}>{stat.percentage || percentage}%</span>
           </li>
         ))}
       </ul>
     </div>
   </section>
 );
+
+Statistics.defaultProps = {
+  percentage: 0,
+};
 
 Statistics.defaultProps = {
   title: '',

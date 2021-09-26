@@ -1,16 +1,17 @@
 import Section from './components/Section/Section';
 
 import Profile from './components/Profile/Profile';
-import user from './API/user.json';
+import user from './data/user.json';
 
 import Statistics from './components/Statistics/Statistics';
-import statisticalData from './API/statistical-data.json';
+import statisticalData from './data/statistical-data.json';
 
 import FriendList from './components/FriendList/FriendList';
-import friends from './API/friends.json';
+import friends from './data/friends.json';
 
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
-import transactions from './API/transactions.json';
+import transactions from './data/transactions.json';
+
 // это обычный экмоскрипт модуль, поэтому из него нужно экспортировать компонент и всегда это экспорт по умолчанию
 // дефолтный экспорт этого модуля
 const App = () => (

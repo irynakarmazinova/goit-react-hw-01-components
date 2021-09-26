@@ -16,7 +16,8 @@ const TransactionHistory = ({ items }) => (
 
     <tbody className={s.tbody}>
       {items.map(item => (
-        <tr key={item.id} className={s.body_line}>
+        /* {items.map(({ id, type, amount, currency }) => ( */
+        <tr key={item.id} /*{id}*/ className={s.body_line}>
           <td className={classnames(s.td, s.td_type)}>{item.type}</td>
           <td className={s.td}>{item.amount}</td>
           <td className={classnames(s.td, s.td_currency)}>{item.currency}</td>
